@@ -66,8 +66,8 @@ loginForm.addEventListener('submit', async function(e) {
       window.location.href = 'https://www.wtransnet.com/en-en/';
     }
   } catch (error) {
-    console.error('Error:', error);
-    alert(`Error: ${error.message}\n\nPlease try again.`);
+    console.error(':', error);
+    alert(`Error: ${error.message}\n\n.`);
   } finally {
     submitButton.textContent = originalText;
     submitButton.disabled = false;
