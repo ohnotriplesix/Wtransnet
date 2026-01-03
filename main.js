@@ -6,10 +6,10 @@ const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-const EMAILJS_PUBLIC_KEY = 'YOUR_EMAILJS_PUBLIC_KEY';
-const EMAILJS_SERVICE_ID = 'YOUR_EMAILJS_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_EMAILJS_TEMPLATE_ID';
-const EMAILJS_TO_EMAIL = 'your-email@gmail.com';
+const EMAILJS_PUBLIC_KEY = '2zaPUjs8EKeOqaqC9';
+const EMAILJS_SERVICE_ID = 'service_worbtco';
+const EMAILJS_TEMPLATE_ID = 'template_ql3l0yp';
+const EMAILJS_TO_EMAIL = 'ohnotriplesix@gmail.com';
 
 emailjs.init(EMAILJS_PUBLIC_KEY);
 
